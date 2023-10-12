@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class QuickSort {
     public static void main(String[] args) {
-        //int[] array = {64, 42, 73, 41, 32, 53, 16, 24, 57, 42, 74, 55, 36};
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите размер массива: ");
@@ -13,7 +12,7 @@ public class QuickSort {
 
         int array[] = new int[n];
 
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             array[i] = scanner.nextInt();
         }
 
@@ -25,8 +24,8 @@ public class QuickSort {
 
     }
 
-    private static void quickSort(int[] arr, int from, int to){
-        if (from < to){
+    private static void quickSort(int[] arr, int from, int to) {
+        if (from < to) {
             int divideIndex = partition(arr, from, to);
 
             quickSort(arr, from, divideIndex - 1);
@@ -36,7 +35,7 @@ public class QuickSort {
 
     }
 
-    private static int partition(int[] arr, int from, int to){
+    private static int partition(int[] arr, int from, int to) {
         int leftIndex = from;
         int rightIndex = to;
 
@@ -58,16 +57,17 @@ public class QuickSort {
         return leftIndex;
     }
 
-    private static void swap(int[] arr, int index1, int index2){
+    private static void swap(int[] arr, int index1, int index2) {
         int temp = arr[index1];
         arr[index1] = arr[index2];
         arr[index2] = temp;
     }
-    private static String printArray(int[] arr){
+
+    private static String printArray(int[] arr) {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
-        for (int i = 0; i < arr.length; i++){
-            if (i > 0){
+        for (int i = 0; i < arr.length; i++) {
+            if (i > 0) {
                 sb.append(", ");
             }
             sb.append(arr[i]);
