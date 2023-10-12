@@ -1,10 +1,21 @@
 package sorts;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class QuickSort {
     public static void main(String[] args) {
-        int[] array = {64, 42, 73, 41, 32, 53, 16, 24, 57, 42, 74, 55, 36};
+        //int[] array = {64, 42, 73, 41, 32, 53, 16, 24, 57, 42, 74, 55, 36};
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введите размер массива: ");
+        int n = scanner.nextInt();
+
+        int array[] = new int[n];
+
+        for (int i = 0; i < n; i++){
+            array[i] = scanner.nextInt();
+        }
 
         System.out.println(printArray(array));
 
