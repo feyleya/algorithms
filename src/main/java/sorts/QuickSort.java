@@ -3,6 +3,8 @@ package sorts;
 import java.util.Arrays;
 import java.util.Scanner;
 
+//Сложность по времени: O(n log n), если опорный элемент неоптимален O(n^2)
+//Сложность по памяти: O(log n)
 public class QuickSort {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
